@@ -60,4 +60,25 @@ public class GreetingControllerTest {
         	body("content", Matchers.is("Hello, Nico!"));
     }
 
+    @Test
+    public void canFetchFirstAndSecondNameEchoGreeting() {
+    	given().
+        	param("name", "John").
+    	when().
+        	get("/greeting").
+        then().
+        	statusCode(HttpStatus.SC_OK).
+        	body("id", Matchers.is(1)).
+        	body("content", Matchers.is("Hello, John!"));
+
+    	given().
+    		param("name", "Mike").
+    	when().
+    		get("/greeting").
+    	then().
+    		statusCode(HttpStatus.SC_OK).
+    		body("id", Matchers.is(2)).
+    		body("content", Matchers.is("Hello, Mike!"));
+    }
+
 }
