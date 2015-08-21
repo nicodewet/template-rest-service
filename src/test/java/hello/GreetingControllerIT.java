@@ -24,7 +24,7 @@ import com.jayway.restassured.RestAssured;
 @SpringApplicationConfiguration(classes = Application.class)
 @WebAppConfiguration
 @IntegrationTest("server.port:0")
-public class GreetingControllerTest {
+public class GreetingControllerIT {
 
 	@Autowired
 	GreetingController greetingController;
