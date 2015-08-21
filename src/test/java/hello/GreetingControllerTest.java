@@ -15,8 +15,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.jayway.restassured.RestAssured;
 
-// http://www.jayway.com/2014/07/04/integration-testing-a-spring-boot-application/
-
 @RunWith(SpringJUnit4ClassRunner.class)   // 1
 @SpringApplicationConfiguration(classes = Application.class)   // 2
 @WebAppConfiguration   // 3
