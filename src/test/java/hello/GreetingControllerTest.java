@@ -1,39 +1,43 @@
 package hello;
 
+import static com.jayway.restassured.RestAssured.given;
 import static com.jayway.restassured.RestAssured.when;
+
+import java.util.concurrent.atomic.AtomicLong;
 
 import org.apache.http.HttpStatus;
 import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.test.util.ReflectionTestUtils;
 
 import com.jayway.restassured.RestAssured;
 
-@RunWith(SpringJUnit4ClassRunner.class)   // 1
-@SpringApplicationConfiguration(classes = Application.class)   // 2
-@WebAppConfiguration   // 3
-@IntegrationTest("server.port:0")   // 4
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(classes = Application.class)
+@WebAppConfiguration
+@IntegrationTest("server.port:0")
 public class GreetingControllerTest {
 
-	@Value("${local.server.port}")   // 6
-	int port;
+	@Autowired
+	GreetingController greetingController;
 
-	Greeting helloWorld;
+	@Value("${local.server.port}")
+	int port;
 
 	@Before
 	public void setUp() {
-		helloWorld = new Greeting(1L, "Hello, World!");
-		// 9
 		RestAssured.port = port;
+		ReflectionTestUtils.setField(greetingController, "counter", new AtomicLong());
 	}
 
-	// 10
     @Test
     public void canFetchFirstHelloWorldGreeting() {
         when().
@@ -42,6 +46,18 @@ public class GreetingControllerTest {
                 statusCode(HttpStatus.SC_OK).
                 body("id", Matchers.is(1)).
                 body("content", Matchers.is("Hello, World!"));
+    }
+
+    @Test
+    public void canFetchFirstNameEchoGreeting() {
+    	given().
+        	param("name", "Nico").
+    	when().
+        	get("/greeting").
+        then().
+        	statusCode(HttpStatus.SC_OK).
+        	body("id", Matchers.is(1)).
+        	body("content", Matchers.is("Hello, Nico!"));
     }
 
 }
