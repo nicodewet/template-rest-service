@@ -41,7 +41,7 @@ public class GreetingControllerIT {
     @Test
     public void canFetchFirstHelloWorldGreeting() {
         when().
-                get("/greeting").
+                get("/greetings").
         then().
                 statusCode(HttpStatus.SC_OK).
                 body("id", Matchers.is(1)).
@@ -51,9 +51,9 @@ public class GreetingControllerIT {
     @Test
     public void canFetchFirstNameEchoGreeting() {
     	given().
-        	param("name", "Nico").
+        	pathParam("name", "Nico").
     	when().
-        	get("/greeting").
+        	get("/greetings/{name}").
         then().
         	statusCode(HttpStatus.SC_OK).
         	body("id", Matchers.is(1)).
@@ -63,18 +63,18 @@ public class GreetingControllerIT {
     @Test
     public void canFetchFirstAndSecondNameEchoGreeting() {
     	given().
-        	param("name", "John").
+        	pathParam("name", "John").
     	when().
-        	get("/greeting").
+        	get("/greetings/{name}").
         then().
         	statusCode(HttpStatus.SC_OK).
         	body("id", Matchers.is(1)).
         	body("content", Matchers.is("Hello, John!"));
 
     	given().
-    		param("name", "Mike").
+    		pathParam("name", "Mike").
     	when().
-    		get("/greeting").
+    		get("/greetings/{name}").
     	then().
     		statusCode(HttpStatus.SC_OK).
     		body("id", Matchers.is(2)).
