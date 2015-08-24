@@ -1,0 +1,4 @@
+============================================
+Application ${application.formatted-version}
+ > powered by Spring Boot ${spring-boot.formatted-version}
+============================================ 
