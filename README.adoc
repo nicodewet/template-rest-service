@@ -16,7 +16,7 @@ The "Hello World"-iness goes well beyond what the web services does, rather it e
 
 Key template aspects include:
 
-* "Invertion of Container" using https://github.com/spring-projects/spring-boot[Spring Boot] with Tomcat 8 as embedded servlet container.
+* "Inversion of Container" using https://github.com/spring-projects/spring-boot[Spring Boot] with Tomcat 8 as embedded servlet container.
 * https://maven.apache.org/surefire/maven-surefire-plugin/[maven-surefire-plugin] driven unit testing.
 * https://maven.apache.org/surefire/maven-failsafe-plugin/[maven-failsafe-plugin] driven integration testing utilising https://github.com/spring-projects/spring-boot[Spring Boot] http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/IntegrationTest.html[@IntegrationTest] and the https://github.com/jayway/rest-assured[rest-assured] REST testing library.
 * Health endpoint exposure using http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#production-ready[spring-boot-starter-actuator]. 
