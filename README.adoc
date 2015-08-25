@@ -20,7 +20,7 @@ Key template aspects include:
 * https://maven.apache.org/surefire/maven-surefire-plugin/[maven-surefire-plugin] driven unit testing.
 * https://maven.apache.org/surefire/maven-failsafe-plugin/[maven-failsafe-plugin] driven integration testing utilising https://github.com/spring-projects/spring-boot[Spring Boot] http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/IntegrationTest.html[@IntegrationTest] and the https://github.com/jayway/rest-assured[rest-assured] REST testing library.
 * Health endpoint exposure using http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#production-ready[spring-boot-starter-actuator]. 
-* An idempotent greetings service and so intentional use of HTTP GET given that responses that are cacheable by proxies with HTTP GET.
+* An idempotent greetings service and so intentional use of HTTP GET given that responses are cacheable by proxies with HTTP GET.
 
 == What the template provides
 
