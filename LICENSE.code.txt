@@ -1,6 +1,13 @@
-   All code in this repository is:
+   This work is derived from https://github.com/spring-guides/gs-rest-service
    =======================================================================
+   Some code in this repository is:
+   
+   Copyright (c) 2015 Nico de Wet. All Rights Reserved
+   
+   Some code in this repository is derived from work that is: 
+   
    Copyright (c) 2013 GoPivotal, Inc. All Rights Reserved
+   ========================================================================
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
