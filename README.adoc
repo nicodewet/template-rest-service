@@ -39,7 +39,7 @@ and in the case of the greetings end points respond with a JSON representation o
 {"id":1,"content":"Hello, World!"}
 ----
 
-You can customize the greeting with an optional `name` parameter in the query string:
+You can customize the greeting with an optional `name` URL parameter:
 
 ----
 http://localhost:8080/greetings/User
