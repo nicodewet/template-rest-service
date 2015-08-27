@@ -12,7 +12,7 @@ projects: [spring-framework]
 
 This solution provides a template "Hello World" RESTful web service with Spring. 
 
-The "Hello World"-iness goes well beyond what the web services does, rather it extends to all ways of working and includes matters such as exposing basic production-ready monitoring features.
+The "Hello World"-iness goes well beyond what the web services does, rather the template prescribes a way of working and includes matters such as exposing basic production-ready monitoring features.
 
 Key template aspects include:
 
@@ -21,6 +21,8 @@ Key template aspects include:
 * https://maven.apache.org/surefire/maven-failsafe-plugin/[maven-failsafe-plugin] driven integration testing utilising https://github.com/spring-projects/spring-boot[Spring Boot] http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/IntegrationTest.html[@IntegrationTest] and the https://github.com/jayway/rest-assured[rest-assured] REST testing library.
 * Health endpoint exposure using http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#production-ready[spring-boot-starter-actuator]. 
 * An idempotent greetings service and so intentional use of HTTP GET given that responses are cacheable by proxies with HTTP GET.
+* An effort to be and at the very least stay at Level 2 (HTTP verbs) of http://www.crummy.com/writing/speaking/2008-QCon/act3.html[Leonard Richardson’s REST Maturity Model].
+* Our service will only support JSON, that is, application/json is the only supported mime type.
 
 == What the template provides
 
@@ -67,4 +69,5 @@ responds with for example:
 
 == What the template builds on
 
-This template project is a fork of the guide https://github.com/spring-guides/gs-rest-service[gs-rest-service] which you are advised to consult for guidance.
+This template project is a fork of the guide https://github.com/spring-guides/gs-rest-service[gs-rest-service] which you are advised to consult for tutorial style guidance. 
+In addition, the https://github.com/spring-guides/tut-bookmarks[Building REST services with Spring] may be worth a read.

@@ -2,7 +2,7 @@
    =======================================================================
    Some code in this repository is:
    
-   Copyright (c) 2015 Nico de Wet. All Rights Reserved
+   Copyright (c) 2015 Nico Dirk de Wet. All Rights Reserved
    
    Some code in this repository is derived from work that is: 
    
