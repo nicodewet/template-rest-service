@@ -34,14 +34,20 @@ The template project both provides and integration tests a service that will acc
 3. http://localhost:8080/health
 ----
 
-and in the case of the greetings end points respond with a JSON representation of a greeting:
+In the case of the "greetings" end point, we are not specifying a name, and so we are asking to GET the default greeting, and 
+so the service will respond with a JSON representation of the default greeting. 
+
+Note the "id", which is incremented with each GET request, technically means that the GET service is not idempotent and relegates the service 
+to Level 1 of the http://www.crummy.com/writing/speaking/2008-QCon/act3.html[REST Maturity Model]. I'm leaving this glitch in there
+intentionally as a reminder to both not expose such a service with the GET verb and how easy it is to "get" it wrong ;)
 
 [source,json]
 ----
 {"id":1,"content":"Hello, World!"}
 ----
 
-You can customize the greeting with an optional `name` URL parameter:
+You can customize the greeting with an optional `name` URL parameter. We are asking to GET the greeting for the specified {name} and in the case of 
+the example below that {name} is User. 
 
 ----
 http://localhost:8080/greetings/User
