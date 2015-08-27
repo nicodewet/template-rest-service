@@ -70,4 +70,4 @@ responds with for example:
 == What the template builds on
 
 This template project is a fork of the guide https://github.com/spring-guides/gs-rest-service[gs-rest-service] which you are advised to consult for tutorial style guidance. 
-In addition, the https://github.com/spring-guides/tut-bookmarks[Building REST services with Spring] may be worth a read.
+In addition, I would recommend reading https://github.com/spring-guides/tut-bookmarks[Building REST services with Spring].
