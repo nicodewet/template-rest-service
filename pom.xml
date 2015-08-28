@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.nicodewet</groupId>
     <artifactId>template-rest-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -85,7 +84,7 @@
         <connection>scm:git:git://github.com/nicodewet/template-rest-service.git</connection>
         <developerConnection>scm:git:git@github.com:nicodewet/template-rest-service.git</developerConnection>
         <url>https://github.com/nicodewet/template-rest-service</url>
-        <tag>HEAD</tag>
+        <tag>template-rest-service-0.0.1</tag>
     </scm>
     
     <distributionManagement>
