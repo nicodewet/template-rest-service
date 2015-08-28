@@ -10,6 +10,8 @@ projects: [spring-framework]
 :icons: font
 :source-highlighter: prettify
 
+https://travis-ci.org/nicodewet/template-rest-service.svg?branch=master
+
 This solution provides a template "Hello World" RESTful web service with Spring. 
 
 The "Hello World"-iness goes well beyond what the web services does, rather the template prescribes a way of working and includes matters such as exposing basic production-ready monitoring features.
