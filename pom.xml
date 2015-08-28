@@ -82,7 +82,7 @@
     <!-- environment settings -->
     
     <scm>
-        <connection>scm:git:https://github.com/nicodewet/template-rest-service.git</connection>
+        <connection>scm:git:git://github.com/nicodewet/template-rest-service.git</connection>
         <developerConnection>scm:git:git@github.com:nicodewet/template-rest-service.git</developerConnection>
         <url>https://github.com/nicodewet/template-rest-service</url>
         <tag>HEAD</tag>
