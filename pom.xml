@@ -4,7 +4,7 @@
 
     <groupId>com.nicodewet</groupId>
     <artifactId>template-rest-service</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -84,7 +84,7 @@
         <connection>scm:git:git://github.com/nicodewet/template-rest-service.git</connection>
         <developerConnection>scm:git:git@github.com:nicodewet/template-rest-service.git</developerConnection>
         <url>https://github.com/nicodewet/template-rest-service</url>
-        <tag>template-rest-service-0.0.1</tag>
+        <tag>HEAD</tag>
     </scm>
     
     <distributionManagement>
