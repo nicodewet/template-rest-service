@@ -77,3 +77,7 @@ responds with for example:
 
 This template project is a fork of the guide https://github.com/spring-guides/gs-rest-service[gs-rest-service] which you are advised to consult for tutorial style guidance. 
 In addition, I would recommend reading https://github.com/spring-guides/tut-bookmarks[Building REST services with Spring].
+
+== Distribution management
+
+Bintray is used the https://bintray.com/nicodewet/maven/template-rest-service/view[Maven repository for this project] and I used http://veithen.github.io/2013/05/26/github-bintray-maven-release-plugin.html[this guide] to get it going.
