@@ -81,4 +81,17 @@ public class GreetingControllerIT {
     		body("content", Matchers.is("Hello, Mike!"));
     }
 
+    @Test
+    public void crossOriginResourceSharingPermitted() {
+    	when().
+    		options("/greetings").
+    	then().
+    		statusCode(HttpStatus.SC_OK).
+    		header("Access-Control-Allow-Origin", "*").
+    		header("Access-Control-Allow-Methods", "GET, OPTIONS").
+    		header("Access-Control-Max-Age", "3600").
+    		header("Access-Control-Allow-Headers", "x-requested-with");
+
+    }
+
 }

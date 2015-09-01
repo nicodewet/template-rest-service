@@ -25,6 +25,7 @@ Key template aspects include:
 * An idempotent greetings service and so intentional use of HTTP GET given that responses are cacheable by proxies with HTTP GET.
 * An effort to be and at the very least stay at Level 2 (HTTP verbs) of http://www.crummy.com/writing/speaking/2008-QCon/act3.html[Leonard Richardson’s REST Maturity Model].
 * Our service will only support JSON, that is, application/json is the only supported mime type.
+* Cross-Origin Resource Sharing (CORS) access control headers in the HTTP response and no cross origin restrictions (Access-Control-Allow-Origin: *).
 
 == What the template provides
 
@@ -73,6 +74,28 @@ responds with for example:
 [source,json]
 ----
 {"status":"UP"}
+----
+
+The HTTP OPTIONS method returns access control headers in the response, permitting cross-origin resource sharing since we're happy to say "Hello" to the whole "World", even involving 
+arbitrary bits of Javascript.
+
+----
+curl -i -X OPTIONS 'http://localhost:8080/greetings'
+----
+
+responds with for example:
+
+----
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: x-requested-with
+X-Application-Context: application
+Allow: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH
+Content-Length: 0
+Date: Tue, 01 Sep 2015 05:03:17 GMT
 ----
 
 == What the template builds on
